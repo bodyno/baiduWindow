@@ -1,0 +1,16 @@
+{
+  "name": "nobody-javascript",
+  "description": "hehe,ths somebody",
+  "version": "3.2.0",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-clean":"*",
+    "grunt-contrib-cssmin":"*",
+    "grunt-contrib-copy":"*",
+    "grunt-contrib-concat":"*",
+    "grunt-contrib-less":"*",
+    "grunt-contrib-htmlmin":"*",
+    "grunt-html-build":"*"
+  }
+}
