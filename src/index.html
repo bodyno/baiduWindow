@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="index.css" rel="stylesheet" />
+    <base target="_blank">
+</head>
+<body>
+    <div id="main"></div>
+    <script type="text/template" id="tmpl">
+        <div class="container clearfix">
+            <div class="main-left">
+                <div class="main-text">推广</div>
+            </div>
+            <div class="main-right">
+                <div class="title-con">
+                    <a href="{{=it.combine1.destUrl}}" class="title-m j_tb">{{=it.combine1.title}}</a>
+                    <div class="title-s">{{=it.combine1.description}}</div>
+                    <div class="title-right">
+                        <a href="{{=it.combine2[0].destUrl}}" class="title-tip1 j_tb">{{=it.combine2[0].title}}</a>
+                        <a href="{{=it.combine2[1].destUrl}}" class="title-tip2 j_tb">{{=it.combine2[1].title}}</a>
+                    </div>
+                </div>
+                <div class="prod-list clearfix">
+
+                    <!--1111-->
+                    {{? it.combine3[0].imgUrl.indexOf("swf")==-1}}
+                    <a href="{{=it.combine3[0].destUrl}}" class="j_tb">
+                        <img src="{{=it.combine3[0].imgUrl}}" width="120" height="90">
+                    </a>
+                    {{??}}
+                    <a href="{{=it.combine3[0].destUrl}}" class="j_tb">
+                        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0"
+                                width="120" height="90">
+                            <param name="movie" value="{{= it.combine3[0].imgUrl}}" />
+                            <param name="quality" value="high" />
+                            <param name="wmode" value="Opaque" />
+                            <param name="AllowScriptAccess" value="always" />
+                            <embed src="{{= it.combine3[0].imgUrl}}" wmode="Opaque" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="120" height="90" allowscriptaccess="always"></embed>
+                        </object>
+                        <div class="flash-link"></div>
+                    </a>
+                    {{?}}
+
+                    <!--2222-->
+                    {{? it.combine3[1].imgUrl.indexOf("swf")==-1}}
+                    <a href="{{=it.combine3[1].destUrl}}" class="j_tb">
+                        <img src="{{=it.combine3[1].imgUrl}}" width="120" height="90">
+                    </a>
+                    {{??}}
+                    <a href="{{=it.combine3[1].destUrl}}" class="j_tb">
+                        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0"
+                                width="120" height="90">
+                            <param name="movie" value="{{= it.combine3[1].imgUrl}}" />
+                            <param name="quality" value="high" />
+                            <param name="wmode" value="Opaque" />
+                            <param name="AllowScriptAccess" value="always" />
+                            <embed src="{{= it.combine3[1].imgUrl}}" wmode="Opaque" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="120" height="90" allowscriptaccess="always"></embed>
+                        </object>
+                        <div class="flash-link"></div>
+                    </a>
+                    {{?}}
+
+                    <!--333-->
+                    {{? it.combine3[2].imgUrl.indexOf("swf")==-1}}
+                    <a href="{{=it.combine3[2].destUrl}}" class="j_tb">
+                        <img src="{{=it.combine3[2].imgUrl}}" width="120" height="90">
+                    </a>
+                    {{??}}
+                    <a href="{{=it.combine3[2].destUrl}}" class="j_tb">
+                        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0"
+                                width="120" height="90">
+                            <param name="movie" value="{{= it.combine3[2].imgUrl}}" />
+                            <param name="quality" value="high" />
+                            <param name="wmode" value="Opaque" />
+                            <param name="AllowScriptAccess" value="always" />
+                            <embed src="{{= it.combine3[2].imgUrl}}" wmode="Opaque" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="120" height="90" allowscriptaccess="always"></embed>
+                        </object>
+                        <div class="flash-link"></div>
+                    </a>
+                    {{?}}
+                </div>
+            </div>
+        </div>
+    </script>
+    <script>
+        var app={
+            combine1: {
+                title: "低价女神季，100块的巧搭秘诀",
+                destUrl: "http://www.vip.com",
+                description: "最近朋友圈疯转，看脸的时代来了"
+            },
+            combine2: [
+                {
+                    title: "唯品会官吧",
+                    destUrl: "http://www.vip.com"
+                },
+                {
+                    title: "唯品会官吧",
+                    destUrl: "http://www.vip.com"
+                }
+            ],
+            combine3: [
+                {
+                    destUrl: "http://www.vip.com",
+                    imgUrl: "images/img.jpg"
+                },
+                {
+                    destUrl: "http://www.vip.com",
+                    imgUrl: "images/img.jpg"
+                },
+                {
+                    destUrl: "http://www.vip.com",
+                    imgUrl: "images/flash.swf"
+                }
+            ]
+        };
+
+
+        var $ = function (a) { return document.getElementById(a) };
+
+        /*doT*/
+        !function(){function a(b,c,d){return("string"==typeof c?c:c.toString()).replace(b.define||g,function(a,c,e,f){return 0===c.indexOf("def.")&&(c=c.substring(4)),c in d||(":"===e?(b.defineParams&&f.replace(b.defineParams,function(a,b,e){d[c]={arg:b,text:e}}),c in d||(d[c]=f)):new Function("def","def['"+c+"']="+f)(d)),""}).replace(b.use||g,function(c,e){b.useParams&&(e=e.replace(b.useParams,function(a,b,c,e){return d[c]&&d[c].arg&&e?(a=(c+":"+e).replace(/'|\\/g,"_"),d.__exp=d.__exp||{},d.__exp[a]=d[c].text.replace(new RegExp("(^|[^\\w$])"+d[c].arg+"([^\\w$])","g"),"$1"+e+"$2"),b+"def.__exp['"+a+"']"):void 0}));var f=new Function("def","return "+e)(d);return f?a(b,f,d):f})}function b(a){return a.replace(/\\('|\\)/g,"$1").replace(/[\r\t\n]/g," ")}var c,d={version:"1.0.3",templateSettings:{evaluate:/\{\{([\s\S]+?(\}?)+)\}\}/g,interpolate:/\{\{=([\s\S]+?)\}\}/g,encode:/\{\{!([\s\S]+?)\}\}/g,use:/\{\{#([\s\S]+?)\}\}/g,useParams:/(^|[^\w$])def(?:\.|\[[\'\"])([\w$\.]+)(?:[\'\"]\])?\s*\:\s*([\w$\.]+|\"[^\"]+\"|\'[^\']+\'|\{[^\}]+\})/g,define:/\{\{##\s*([\w\.$]+)\s*(\:|=)([\s\S]+?)#\}\}/g,defineParams:/^\s*([\w$]+):([\s\S]+)/,conditional:/\{\{\?(\?)?\s*([\s\S]*?)\s*\}\}/g,iterate:/\{\{~\s*(?:\}\}|([\s\S]+?)\s*\:\s*([\w$]+)\s*(?:\:\s*([\w$]+))?\s*\}\})/g,varname:"it",strip:!0,append:!0,selfcontained:!1,doNotSkipEncoded:!1},template:void 0,compile:void 0};d.encodeHTMLSource=function(a){var b={"&":"&#38;","<":"&#60;",">":"&#62;",'"':"&#34;","'":"&#39;","/":"&#47;"},c=a?/[&<>"'\/]/g:/&(?!#?\w+;)|<|>|"|'|\//g;return function(a){return a?a.toString().replace(c,function(a){return b[a]||a}):""}},c=function(){return this||(0,eval)("this")}(),"undefined"!=typeof module&&module.exports?module.exports=d:"function"==typeof define&&define.amd?define(function(){return d}):c.doT=d;var e={start:"'+(",end:")+'",startencode:"'+encodeHTML("},f={start:"';out+=(",end:");out+='",startencode:"';out+=encodeHTML("},g=/$^/;d.template=function(h,i,j){i=i||d.templateSettings;var k,l,m=i.append?e:f,n=0;h=i.use||i.define?a(i,h,j||{}):h,h=("var out='"+(i.strip?h.replace(/(^|\r|\n)\t* +| +\t*(\r|\n|$)/g," ").replace(/\r|\n|\t|\/\*[\s\S]*?\*\//g,""):h).replace(/'|\\/g,"\\$&").replace(i.interpolate||g,function(a,c){return m.start+b(c)+m.end}).replace(i.encode||g,function(a,c){return k=!0,m.startencode+b(c)+m.end}).replace(i.conditional||g,function(a,c,d){return c?d?"';}else if("+b(d)+"){out+='":"';}else{out+='":d?"';if("+b(d)+"){out+='":"';}out+='"}).replace(i.iterate||g,function(a,c,d,e){return c?(n+=1,l=e||"i"+n,c=b(c),"';var arr"+n+"="+c+";if(arr"+n+"){var "+d+","+l+"=-1,l"+n+"=arr"+n+".length-1;while("+l+"<l"+n+"){"+d+"=arr"+n+"["+l+"+=1];out+='"):"';} } out+='"}).replace(i.evaluate||g,function(a,c){return"';"+b(c)+"out+='"})+"';return out;").replace(/\n/g,"\\n").replace(/\t/g,"\\t").replace(/\r/g,"\\r").replace(/(\s|;|\}|^|\{)out\+='';/g,"$1").replace(/\+''/g,""),k&&(i.selfcontained||!c||c._encodeHTML||(c._encodeHTML=d.encodeHTMLSource(i.doNotSkipEncoded)),h="var encodeHTML = typeof _encodeHTML !== 'undefined' ? _encodeHTML : ("+d.encodeHTMLSource.toString()+"("+(i.doNotSkipEncoded||"")+"));"+h);try{return new Function(i.varname,h)}catch(o){throw"undefined"!=typeof console&&console.log("Could not create a template function: "+h),o}},d.compile=function(a,b){return d.template(a,null,b)}}();
+
+        var tempFn = doT.template($("tmpl").innerHTML);
+        $("main").innerHTML=tempFn(app);
+
+    </script>
+    <script src="//ms.vipstatic.com/union/nessenger_baidu_iframe.js"></script>
+    <script>
+        !function(){
+            Messenger && Messenger.success();
+        }();
+    </script>
+</body>
+</html>
